@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* contact list */
+.contact_item {
+	margin-bottom: 10px;
+}
+.avatar_image {
+	margin-right: 15px;
+	width: 60px !important;
+	height: 60px !important;
+}
