@@ -9,7 +9,7 @@ const ContactList = (props) => {
 				Contact List
 			</Typography>
 			{props.contacts.map((contact, index) => {
-				return <ContactCard contact={contact} index={index} />;
+				return <ContactCard contact={contact} key={index} />;
 			})}
 		</div>
 	);

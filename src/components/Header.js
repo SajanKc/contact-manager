@@ -6,15 +6,9 @@ import SearchIcon from "@material-ui/icons/Search";
 const useStyles = makeStyles((theme) => ({
 	root: {
 		flexGrow: 1,
-		marginBottom:"15px"
+		marginBottom: "15px",
 	},
-	title: {
-		flexGrow: 1,
-		display: "none",
-		[theme.breakpoints.up("xs")]: {
-			display: "block",
-		},
-	},
+	title: { width: "100%" },
 	search: {
 		position: "relative",
 		borderRadius: theme.shape.borderRadius,
@@ -22,12 +16,7 @@ const useStyles = makeStyles((theme) => ({
 		"&:hover": {
 			backgroundColor: fade(theme.palette.common.white, 0.25),
 		},
-		marginLeft: 0,
 		width: "100%",
-		[theme.breakpoints.up("xs")]: {
-			marginLeft: theme.spacing(1),
-			width: "auto",
-		},
 	},
 	searchIcon: {
 		padding: theme.spacing(0, 2),
@@ -71,7 +60,7 @@ export default function Header() {
 							<SearchIcon />
 						</div>
 						<InputBase
-							placeholder="Search…"
+							placeholder="Search contact...."
 							classes={{
 								root: classes.inputRoot,
 								input: classes.inputInput,

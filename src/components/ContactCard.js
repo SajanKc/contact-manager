@@ -3,19 +3,19 @@ import { Paper, Card, CardContent, Typography, CardActions, IconButton, Avatar }
 import DeleteForeverOutlinedIcon from "@material-ui/icons/DeleteForeverOutlined";
 import pp from "../images/pp250.png";
 
-const ContactCard = (props) => {
+const ContactCard = ({ contact }) => {
 	return (
-		<div className="contact_item" key={props.index}>
+		<div className="contact_item">
 			<Paper elevation={3}>
 				<Card style={{ display: "flex", justifyContent: "space-between" }}>
 					<CardContent style={{ display: "flex", alignItems: "center" }}>
 						<Avatar className="avatar_image" alt="Sajan Kc" src={pp} />
 						<div>
 							<Typography variant="h6" color="textPrimary" component="h3">
-								{props.contact.name}
+								{contact.name}
 							</Typography>
 							<Typography variant="body2" color="textSecondary" component="p">
-								{props.contact.email}
+								{contact.email}
 							</Typography>
 						</div>
 					</CardContent>
