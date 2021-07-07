@@ -13,6 +13,13 @@ function App() {
 		setContacts([...contacts, contact]);
 	};
 
+	const removeContactHandler = (id) => {
+		const newContactList = contacts.filter((contact) => {
+			return contact.id !== id;
+		});
+		if (newContactList) setContacts(newContactList);
+	};
+
 	React.useEffect(() => {
 		const retrivedContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
 		if (retrivedContacts) setContacts(retrivedContacts);
@@ -27,7 +34,7 @@ function App() {
 			<Header />
 			<Container>
 				<AddContact addContactHandler={addContactHandler} />
-				<ContactList contacts={contacts} />
+				<ContactList contacts={contacts} getContactId={removeContactHandler} />
 			</Container>
 		</>
 	);
